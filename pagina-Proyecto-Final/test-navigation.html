@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de Navegación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        .test-button {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .test-button:hover {
+            background: #f7931e;
+        }
+        .status {
+            background: #333;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prueba de Navegación - Botón de Inicio</h1>
+    
+    <div class="status">
+        <h3>Estado actual:</h3>
+        <p id="current-page">Página: Home</p>
+        <p id="button-status">Botón de inicio: No disponible</p>
+    </div>
+    
+    <div>
+        <button class="test-button" onclick="testNavigation('procedimientos')">Ir a Procedimientos</button>
+        <button class="test-button" onclick="testNavigation('videos')">Ir a Videos</button>
+        <button class="test-button" onclick="testNavigation('vulnerabilidades')">Ir a Vulnerabilidades</button>
+        <button class="test-button" onclick="testNavigation('soluciones')">Ir a Soluciones</button>
+        <button class="test-button" onclick="testNavigation('contactos')">Ir a Contactos</button>
+    </div>
+    
+    <div>
+        <button class="test-button" onclick="testGoHome()">Probar Botón de Inicio</button>
+        <button class="test-button" onclick="checkButtonStatus()">Verificar Estado del Botón</button>
+    </div>
+    
+    <div id="log" style="background: #000; padding: 10px; margin-top: 20px; border-radius: 5px; max-height: 200px; overflow-y: auto;">
+        <h3>Log de eventos:</h3>
+    </div>
+
+    <script>
+        function log(message) {
+            const logDiv = document.getElementById('log');
+            const timestamp = new Date().toLocaleTimeString();
+            logDiv.innerHTML += `<div>[${timestamp}] ${message}</div>`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function testNavigation(page) {
+            log(`Navegando a: ${page}`);
+            document.getElementById('current-page').textContent = `Página: ${page}`;
+            
+            // Simular navegación
+            if (window.webApp) {
+                window.webApp.navigateToPage(page);
+            }
+        }
+
+        function testGoHome() {
+            log('Probando botón de inicio...');
+            if (window.webApp) {
+                window.webApp.goToHome();
+            }
+        }
+
+        function checkButtonStatus() {
+            const backButton = document.querySelector('.back-button');
+            const status = backButton ? 'Disponible' : 'No disponible';
+            document.getElementById('button-status').textContent = `Botón de inicio: ${status}`;
+            log(`Estado del botón: ${status}`);
+        }
+
+        // Verificar cuando se carga la página principal
+        window.addEventListener('load', () => {
+            log('Página cargada');
+            setTimeout(() => {
+                if (window.webApp) {
+                    log('Sistema de navegación inicializado');
+                } else {
+                    log('ERROR: Sistema de navegación no encontrado');
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html> 

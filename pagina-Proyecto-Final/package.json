@@ -1,0 +1,34 @@
+{
+  "name": "pagina-proyecto-final",
+  "version": "1.0.0",
+  "description": "Página web interactiva con tema oscuro y animaciones 3D",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000",
+    "build": "echo 'No build step needed for static site'",
+    "deploy": "echo 'Use GitHub Pages, Netlify, or Vercel for deployment'"
+  },
+  "keywords": [
+    "web",
+    "interactive",
+    "dark-theme",
+    "animations",
+    "responsive",
+    "security"
+  ],
+  "author": "Abdiel Torres y Hennessy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Abdiel2027/pagina-proyecto-final.git"
+  },
+  "homepage": "https://abdiel2027.github.io/pagina-proyecto-final",
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

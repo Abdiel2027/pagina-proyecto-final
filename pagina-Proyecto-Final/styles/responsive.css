@@ -1,0 +1,472 @@
+/* Diseño Responsive */
+
+/* Dispositivos móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+    .main-container {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+        min-height: 150px;
+    }
+
+    .card-icon {
+        font-size: 2rem;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .page-navigation {
+        bottom: 1rem;
+        padding: 0.5rem;
+        border-radius: 25px;
+    }
+
+    .nav-cards {
+        gap: 0.5rem;
+    }
+
+    .nav-card {
+        padding: 0.3rem 0.5rem;
+        min-width: 60px;
+    }
+
+    .nav-card i {
+        font-size: 1rem;
+    }
+
+    .nav-card span {
+        font-size: 0.6rem;
+    }
+
+    .page {
+        padding: 1rem;
+    }
+
+    .page h2 {
+        font-size: 1.8rem;
+    }
+
+    .procedures-grid,
+    .videos-grid,
+    .vulnerabilities-grid,
+    .solutions-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contact-card {
+        padding: 1.5rem;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .profile-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-image i {
+        font-size: 2rem;
+    }
+
+    .profile-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Dispositivos móviles medianos (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .main-container {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .card {
+        padding: 1.8rem;
+        min-height: 180px;
+    }
+
+    .page-navigation {
+        bottom: 1.5rem;
+    }
+
+    .nav-cards {
+        gap: 0.8rem;
+    }
+
+    .page {
+        padding: 1.5rem;
+    }
+
+    .page h2 {
+        font-size: 2rem;
+    }
+
+    .procedures-grid,
+    .videos-grid,
+    .vulnerabilities-grid,
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .social-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .main-container {
+        padding: 2rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .page-navigation {
+        bottom: 2rem;
+    }
+
+    .page {
+        padding: 2rem;
+    }
+
+    .procedures-grid,
+    .videos-grid,
+    .vulnerabilities-grid,
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contact-info {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .social-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Pantallas grandes (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .cards-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+
+    .procedures-grid,
+    .videos-grid,
+    .vulnerabilities-grid,
+    .solutions-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Pantallas extra grandes (más de 1440px) */
+@media (min-width: 1441px) {
+    .main-container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2.5rem;
+    }
+
+    .procedures-grid,
+    .videos-grid,
+    .vulnerabilities-grid,
+    .solutions-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2.5rem;
+    }
+
+    .page-content {
+        max-width: 1400px;
+    }
+}
+
+/* Orientación horizontal en móviles */
+@media (max-width: 768px) and (orientation: landscape) {
+    .main-container {
+        padding: 1rem;
+    }
+
+    .header {
+        margin-bottom: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+        min-height: 120px;
+    }
+
+    .page-navigation {
+        bottom: 0.5rem;
+        padding: 0.3rem;
+    }
+
+    .nav-card {
+        padding: 0.2rem 0.4rem;
+        min-width: 50px;
+    }
+
+    .nav-card span {
+        display: none;
+    }
+}
+
+/* Ajustes para dispositivos con pantalla táctil */
+@media (hover: none) and (pointer: coarse) {
+    .card:hover {
+        transform: none;
+    }
+
+    .card:active {
+        transform: translateY(-5px) scale(1.02);
+    }
+
+    .nav-card:hover {
+        transform: none;
+    }
+
+    .nav-card:active {
+        transform: translateY(-2px);
+    }
+
+    .social-link:hover {
+        transform: none;
+    }
+
+    .social-link:active {
+        transform: translateY(-2px);
+    }
+}
+
+/* Ajustes para dispositivos con pantalla de alta densidad */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .stars {
+        background-size: 100px 100px;
+    }
+
+    .stars::before {
+        background-size: 150px 150px;
+    }
+
+    .stars::after {
+        background-size: 75px 75px;
+    }
+}
+
+/* Ajustes para dispositivos con preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .card {
+        animation: none;
+    }
+
+    .card-icon {
+        animation: none;
+    }
+
+    .stars {
+        animation: none;
+    }
+
+    .shooting-stars::before,
+    .shooting-stars::after {
+        animation: none;
+    }
+}
+
+/* Ajustes para modo oscuro del sistema */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --dark-bg: #000000;
+        --darker-bg: #000000;
+        --card-bg: #111111;
+        --border-color: #222222;
+    }
+}
+
+/* Ajustes para modo claro del sistema (opcional) */
+@media (prefers-color-scheme: light) {
+    :root {
+        --dark-bg: #f5f5f5;
+        --darker-bg: #e0e0e0;
+        --card-bg: #ffffff;
+        --text-primary: #333333;
+        --text-secondary: #666666;
+        --border-color: #dddddd;
+    }
+}
+
+/* Ajustes para dispositivos con contraste alto */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #ff0000;
+        --secondary-color: #ff6600;
+        --text-primary: #ffffff;
+        --text-secondary: #ffffff;
+        --border-color: #ffffff;
+    }
+
+    .card {
+        border: 3px solid var(--border-color);
+    }
+
+    .nav-card {
+        border: 2px solid var(--border-color);
+    }
+}
+
+/* Ajustes para dispositivos con zoom */
+@media (max-width: 480px) and (min-resolution: 2dppx) {
+    .card {
+        font-size: 16px; /* Previene zoom automático en iOS */
+    }
+
+    input, textarea, select {
+        font-size: 16px;
+    }
+}
+
+/* Ajustes para dispositivos con pantalla curva */
+@media (min-width: 1920px) {
+    .main-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .page-navigation {
+        left: 5%;
+        transform: none;
+    }
+}
+
+/* Ajustes para dispositivos con pantalla dividida */
+@media (max-height: 600px) {
+    .main-container {
+        padding: 1rem;
+    }
+
+    .header {
+        margin-bottom: 1rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .cards-container {
+        gap: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+        min-height: 120px;
+    }
+
+    .page-navigation {
+        bottom: 0.5rem;
+    }
+}
+
+/* Ajustes para dispositivos con teclado virtual */
+@media (max-height: 400px) {
+    .page-navigation {
+        display: none;
+    }
+
+    .back-button {
+        top: 0.5rem;
+        left: 0.5rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+} 

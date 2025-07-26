@@ -1,0 +1,487 @@
+/* Animaciones de estrellas 3D */
+
+/* Contenedor de estrellas */
+#stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Estrellas de fondo */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="white" opacity="0.8"/></svg>') repeat;
+    background-size: 200px 200px;
+    animation: stars-move 20s linear infinite;
+}
+
+.stars::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0.5" fill="white" opacity="0.6"/></svg>') repeat;
+    background-size: 300px 300px;
+    animation: stars-move 30s linear infinite reverse;
+}
+
+.stars::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1.5" fill="white" opacity="0.4"/></svg>') repeat;
+    background-size: 150px 150px;
+    animation: stars-move 25s linear infinite;
+}
+
+@keyframes stars-move {
+    0% {
+        transform: translateZ(0) rotate(0deg);
+    }
+    100% {
+        transform: translateZ(100px) rotate(360deg);
+    }
+}
+
+/* Efecto de parpadeo */
+.twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Estrellas fugaces */
+.shooting-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.shooting-stars::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: linear-gradient(45deg, white, transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 20px white;
+    animation: shooting-star-1 8s linear infinite;
+}
+
+.shooting-stars::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 80%;
+    width: 3px;
+    height: 3px;
+    background: linear-gradient(45deg, var(--primary-color), transparent);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--primary-color);
+    animation: shooting-star-2 12s linear infinite;
+}
+
+@keyframes shooting-star-1 {
+    0% {
+        transform: translate(-50%, -50%) translateX(-100vw) translateY(-100vh) rotate(45deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(100vw) translateY(100vh) rotate(45deg);
+        opacity: 0;
+    }
+}
+
+@keyframes shooting-star-2 {
+    0% {
+        transform: translate(-50%, -50%) translateX(-100vw) translateY(-50vh) rotate(-30deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(100vw) translateY(50vh) rotate(-30deg);
+        opacity: 0;
+    }
+}
+
+/* Estrellas adicionales con movimiento 3D */
+.stars-container::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white;
+    animation: star-float-1 15s ease-in-out infinite;
+}
+
+.stars-container::after {
+    content: '';
+    position: absolute;
+    top: 70%;
+    left: 90%;
+    width: 3px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    box-shadow: 0 0 15px var(--secondary-color);
+    animation: star-float-2 20s ease-in-out infinite;
+}
+
+@keyframes star-float-1 {
+    0%, 100% {
+        transform: translateZ(0) scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateZ(50px) scale(1.5);
+        opacity: 1;
+    }
+}
+
+@keyframes star-float-2 {
+    0%, 100% {
+        transform: translateZ(0) scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateZ(30px) scale(1.3);
+        opacity: 1;
+    }
+}
+
+/* Animaciones de entrada para las tarjetas */
+.card {
+    animation: card-enter 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes card-enter {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Animación de flotación para las tarjetas */
+.card {
+    animation: card-enter 0.8s ease-out forwards, card-float 6s ease-in-out infinite;
+}
+
+@keyframes card-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Animación de rotación para los iconos */
+.card-icon {
+    animation: icon-rotate 10s linear infinite;
+}
+
+@keyframes icon-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.card:hover .card-icon {
+    animation: icon-bounce 0.6s ease-in-out;
+}
+
+@keyframes icon-bounce {
+    0%, 100% {
+        transform: scale(1.2) rotate(5deg);
+    }
+    50% {
+        transform: scale(1.4) rotate(10deg);
+    }
+}
+
+/* Animación de transición entre páginas */
+.page {
+    animation: page-slide-in 0.5s ease-out;
+}
+
+@keyframes page-slide-in {
+    0% {
+        opacity: 0;
+        transform: translateX(100%) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Animación de entrada para elementos de las páginas */
+.procedure-card,
+.video-card,
+.vulnerability-card,
+.solution-card {
+    animation: element-fade-in 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.procedure-card:nth-child(1) { animation-delay: 0.1s; }
+.procedure-card:nth-child(2) { animation-delay: 0.2s; }
+.procedure-card:nth-child(3) { animation-delay: 0.3s; }
+.procedure-card:nth-child(4) { animation-delay: 0.4s; }
+.procedure-card:nth-child(5) { animation-delay: 0.5s; }
+.procedure-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes element-fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animación de pulso para elementos interactivos */
+.video-placeholder {
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 5px var(--primary-color);
+    }
+    50% {
+        box-shadow: 0 0 20px var(--primary-color);
+    }
+}
+
+/* Animación de hover para enlaces sociales */
+.social-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.social-link:hover::before {
+    left: 100%;
+}
+
+/* Animación de carga para la página */
+.loading-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fade-out 1s ease-out 2s forwards;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Efectos de partículas para el fondo */
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    animation: particle-float 8s linear infinite;
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(100px);
+        opacity: 0;
+    }
+}
+
+/* Animación de texto con efecto de escritura */
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid var(--primary-color);
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--primary-color); }
+}
+
+/* Efecto de ondas para botones */
+.ripple-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Animación de scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Efecto de parallax para el fondo */
+.parallax-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translateZ(0);
+}
+
+/* Animación de respiración para elementos */
+.breathing-animation {
+    animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+} 

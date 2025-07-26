@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final - Seguridad Web</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Fondo con estrellas 3D -->
+    <div id="stars-container">
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="shooting-stars"></div>
+    </div>
+    
+    <!-- Contenedor de partículas flotantes -->
+    <div class="particles"></div>
+
+    <!-- Contenido principal -->
+    <div class="main-container">
+        <header class="header">
+            <h1 class="title">Proyecto Final</h1>
+            <p class="subtitle">Seguridad Web y Análisis de Vulnerabilidades</p>
+        </header>
+
+        <div class="cards-container">
+            <!-- Tarjeta 1: Procedimientos -->
+            <div class="card oval-card" data-page="procedimientos">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Procedimientos</h3>
+                    <p>Guías y metodologías del proyecto</p>
+                </div>
+                <div class="card-glow"></div>
+                <div class="explosion-effect"></div>
+            </div>
+
+            <!-- Tarjeta 2: Videos -->
+            <div class="card oval-card" data-page="videos">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Videos</h3>
+                    <p>Contenido multimedia explicativo</p>
+                </div>
+                <div class="card-glow"></div>
+                <div class="explosion-effect"></div>
+            </div>
+
+            <!-- Tarjeta 3: Vulnerabilidades -->
+            <div class="card oval-card" data-page="vulnerabilidades">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Vulnerabilidades</h3>
+                    <p>Análisis de riesgos de seguridad</p>
+                </div>
+                <div class="card-glow"></div>
+                <div class="explosion-effect"></div>
+            </div>
+
+            <!-- Tarjeta 4: Soluciones -->
+            <div class="card oval-card" data-page="soluciones">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Soluciones</h3>
+                    <p>Prevención y protección</p>
+                </div>
+                <div class="card-glow"></div>
+                <div class="explosion-effect"></div>
+            </div>
+
+            <!-- Tarjeta 5: Contactos -->
+            <div class="card oval-card" data-page="contactos">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-address-book"></i>
+                    </div>
+                    <h3>Contactos</h3>
+                    <p>Información de contacto</p>
+                </div>
+                <div class="card-glow"></div>
+                <div class="explosion-effect"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación entre páginas -->
+    <nav class="page-navigation">
+        <div class="nav-cards">
+            <div class="nav-card" data-page="procedimientos">
+                <i class="fas fa-clipboard-list"></i>
+                <span>Procedimientos</span>
+            </div>
+            <div class="nav-card" data-page="videos">
+                <i class="fas fa-video"></i>
+                <span>Videos</span>
+            </div>
+            <div class="nav-card" data-page="vulnerabilidades">
+                <i class="fas fa-shield-alt"></i>
+                <span>Vulnerabilidades</span>
+            </div>
+            <div class="nav-card" data-page="soluciones">
+                <i class="fas fa-tools"></i>
+                <span>Soluciones</span>
+            </div>
+            <div class="nav-card" data-page="contactos">
+                <i class="fas fa-address-book"></i>
+                <span>Contactos</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenedor de páginas -->
+    <div id="pages-container">
+        <!-- Página de Procedimientos -->
+        <div class="page" id="procedimientos-page">
+            <div class="page-content">
+                <h2>Procedimientos del Proyecto</h2>
+                <div class="procedures-grid">
+                    <div class="procedure-card">
+                        <h3>Fase 1: Análisis Inicial</h3>
+                        <p>Evaluación completa del sistema objetivo para identificar puntos de entrada potenciales.</p>
+                    </div>
+                    <div class="procedure-card">
+                        <h3>Fase 2: Reconocimiento</h3>
+                        <p>Recopilación de información sobre la infraestructura y tecnologías utilizadas.</p>
+                    </div>
+                    <div class="procedure-card">
+                        <h3>Fase 3: Identificación</h3>
+                        <p>Detección de vulnerabilidades específicas en el sistema.</p>
+                    </div>
+                    <div class="procedure-card">
+                        <h3>Fase 4: Explotación</h3>
+                        <p>Pruebas controladas para validar las vulnerabilidades encontradas.</p>
+                    </div>
+                    <div class="procedure-card">
+                        <h3>Fase 5: Documentación</h3>
+                        <p>Registro detallado de hallazgos y recomendaciones de seguridad.</p>
+                    </div>
+                    <div class="procedure-card">
+                        <h3>Fase 6: Mitigación</h3>
+                        <p>Implementación de medidas de seguridad para reducir riesgos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página de Videos -->
+        <div class="page" id="videos-page">
+            <div class="page-content">
+                <h2>Videos Explicativos</h2>
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <h3>Introducción al Proyecto</h3>
+                        </div>
+                        <p>Descripción general del proyecto de seguridad web</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <h3>Análisis de Vulnerabilidades</h3>
+                        </div>
+                        <p>Demostración de técnicas de detección de vulnerabilidades</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <h3>Implementación de Soluciones</h3>
+                        </div>
+                        <p>Guía paso a paso para implementar medidas de seguridad</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <h3>Pruebas de Penetración</h3>
+                        </div>
+                        <p>Metodología y herramientas para pruebas de seguridad</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <h3>Reporte Final</h3>
+                        </div>
+                        <p>Presentación de resultados y recomendaciones</p>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle"></i>
+                            <h3>Q&A y Conclusiones</h3>
+                        </div>
+                        <p>Preguntas frecuentes y conclusiones del proyecto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página de Vulnerabilidades -->
+        <div class="page" id="vulnerabilidades-page">
+            <div class="page-content">
+                <h2>Análisis de Vulnerabilidades</h2>
+                <div class="vulnerabilities-grid">
+                    <div class="vulnerability-card">
+                        <h3>SQL Injection</h3>
+                        <p>Vulnerabilidad que permite la inyección de código SQL malicioso en consultas de base de datos.</p>
+                        <div class="severity high">Alta</div>
+                    </div>
+                    <div class="vulnerability-card">
+                        <h3>Cross-Site Scripting (XSS)</h3>
+                        <p>Ataque que permite ejecutar scripts maliciosos en el navegador de otros usuarios.</p>
+                        <div class="severity high">Alta</div>
+                    </div>
+                    <div class="vulnerability-card">
+                        <h3>Cross-Site Request Forgery (CSRF)</h3>
+                        <p>Ataque que fuerza a usuarios autenticados a ejecutar acciones no deseadas.</p>
+                        <div class="severity medium">Media</div>
+                    </div>
+                    <div class="vulnerability-card">
+                        <h3>Inyección de Comandos</h3>
+                        <p>Vulnerabilidad que permite ejecutar comandos del sistema operativo.</p>
+                        <div class="severity critical">Crítica</div>
+                    </div>
+                    <div class="vulnerability-card">
+                        <h3>Exposición de Datos Sensibles</h3>
+                        <p>Información confidencial expuesta sin la protección adecuada.</p>
+                        <div class="severity medium">Media</div>
+                    </div>
+                    <div class="vulnerability-card">
+                        <h3>Autenticación Débil</h3>
+                        <p>Mecanismos de autenticación que pueden ser vulnerados fácilmente.</p>
+                        <div class="severity high">Alta</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página de Soluciones -->
+        <div class="page" id="soluciones-page">
+            <div class="page-content">
+                <h2>Soluciones y Prevención</h2>
+                <div class="solutions-grid">
+                    <div class="solution-card">
+                        <h3>Prevención de SQL Injection</h3>
+                        <ul>
+                            <li>Usar consultas preparadas</li>
+                            <li>Validar y sanitizar entradas</li>
+                            <li>Implementar principio de menor privilegio</li>
+                            <li>Usar ORM cuando sea posible</li>
+                        </ul>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Protección contra XSS</h3>
+                        <ul>
+                            <li>Escapar datos de salida</li>
+                            <li>Implementar Content Security Policy</li>
+                            <li>Validar entradas del usuario</li>
+                            <li>Usar HttpOnly cookies</li>
+                        </ul>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Mitigación de CSRF</h3>
+                        <ul>
+                            <li>Implementar tokens CSRF</li>
+                            <li>Validar origen de requests</li>
+                            <li>Usar SameSite cookies</li>
+                            <li>Verificar referer headers</li>
+                        </ul>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Seguridad de Autenticación</h3>
+                        <ul>
+                            <li>Implementar autenticación multifactor</li>
+                            <li>Usar contraseñas fuertes</li>
+                            <li>Implementar rate limiting</li>
+                            <li>Usar HTTPS obligatorio</li>
+                        </ul>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Protección de Datos</h3>
+                        <ul>
+                            <li>Encriptar datos sensibles</li>
+                            <li>Implementar logging seguro</li>
+                            <li>Usar headers de seguridad</li>
+                            <li>Realizar auditorías regulares</li>
+                        </ul>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Monitoreo y Respuesta</h3>
+                        <ul>
+                            <li>Implementar SIEM</li>
+                            <li>Configurar alertas de seguridad</li>
+                            <li>Plan de respuesta a incidentes</li>
+                            <li>Backups regulares y seguros</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Página de Contactos -->
+        <div class="page" id="contactos-page">
+            <div class="page-content">
+                <h2>Información de Contacto</h2>
+                <div class="contact-container">
+                    <!-- Primera tarjeta de contacto - Abdiel -->
+                    <div class="contact-card">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <img src="img/img1.jpg" alt="Abdiel Torres" class="profile-photo">
+                            </div>
+                            <h3>Abdiel Torres</h3>
+                            <p>Especialista en Seguridad Informática</p>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+50765184626" class="contact-link">+507 6518-4626</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Panamá, Las Mañanitas</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:Jorgebenz19@gmail.com" class="contact-link">Jorgebenz19@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="social-media">
+                            <h3>Redes Sociales</h3>
+                            <div class="social-links">
+                                <a href="https://instagram.com/a.bdiel_27" target="_blank" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="https://wa.me/50765184626" target="_blank" class="social-link whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
+                                <a href="https://linkedin.com/in/tu_perfil" target="_blank" class="social-link linkedin">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/Abdiel2027" target="_blank" class="social-link github">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Segunda tarjeta de contacto - Hennessy -->
+                    <div class="contact-card">
+                        <div class="profile-card">
+                            <div class="profile-image">
+                                <img src="img/img2.jpg" alt="Hennessy" class="profile-photo">
+                            </div>
+                            <h3>Hennessy</h3>
+                            <p>Colaborador del Proyecto</p>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:+50765476979" class="contact-link">+507 6547-6979</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Panamá, Pacora Park</span>
+                            </div>
+                        </div>
+
+                        <div class="social-media">
+                            <h3>Redes Sociales</h3>
+                            <div class="social-links">
+                                <a href="https://instagram.com/hennesyrosa" target="_blank" class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="https://wa.me/50765476979" target="_blank" class="social-link whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html> 
